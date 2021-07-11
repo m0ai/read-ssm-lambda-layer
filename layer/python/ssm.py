@@ -5,8 +5,8 @@ import logging
 ssm = boto3.client('ssm')
 log = logging.getLogger('ssm-layer')
 log.setLevel(logging.INFO)
-DEBUG = int(os.getenv('SSM_LAYER_DEBUG', 0))
 
+DEBUG = int(os.getenv('SSM_LAYER_DEBUG', 0))
 if DEBUG:
     import sys
     sh = logging.StreamHandler(sys.stdout)
