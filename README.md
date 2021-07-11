@@ -1,26 +1,15 @@
-## read-ssm-lambda-layer
-Lambda Layer that loads environment variable from AWS Parameter Store with predefined your env variable. (discern as env prefix; like 'AWS_SSM_')
+# Welcome to your CDK TypeScript project!
 
-```python
+This is a blank project for TypeScript development with CDK.
 
-import os
+The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
-# before
-# AWS_SSM_DB_PASSWORD=/app/db_password
-# AWS_SSM_SECRET_KEY=/app/key
+## Useful commands
 
-from ssm import load_parameter_store_with_envs
-load_parameter_store_with_envs(prefix='AWS_SSM_')
-
-# after 
-# AWS_SSM_DB_PASSWORD=/app/db_password
-# AWS_SSM_SECRET_KEY=/app/key
-# DB_PASSWORD=p@assw0rd!
-# SECRET_KEY=S2cr2t_key
-
-
-def main(event, context):
-  # in your lambda handler
-  pass
-  
-```
+ * `npm run build`   compile typescript to js
+ * `npm run watch`   watch for changes and compile
+ * `npm run test`    perform the jest unit tests
+ * `cdk deploy`      deploy this stack to your default AWS account/region
+ * `cdk diff`        compare deployed stack with current state
+ * `cdk synth`       emits the synthesized CloudFormation template
+   cdk bootstrap     
